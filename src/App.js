@@ -30,8 +30,8 @@ class App extends Component {
     super();
     this.state = {
       date: `${months[mm - 1]} ${dd}, ${yyyy}`,
-      companyName: '---',
-      address: '---',
+      companyName: '',
+      address: '',
       city: '---',
       role: '',
       position: '',
@@ -78,9 +78,9 @@ class App extends Component {
         </div>
         <div id="letter">
           <Header state={this.state} />
-          {this.state.role === 'ResearchIntern' ? (
+          {this.state.role === 'Research Intern' ? (
             <ResearchIntern state={this.state} />
-          ) : this.state.role === 'VolunteerAid' ? (
+          ) : this.state.role === 'Volunteer Aid' ? (
             <VolunteerAid state={this.state} />
           ) : (
             '(Please select a role you are applying for...)'
